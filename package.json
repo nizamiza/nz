@@ -1,0 +1,21 @@
+{
+  "name": "nz",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Simple helper framework for web components",
+  "main": "src/core/init.js",
+  "scripts": {
+    "start": "http-server -p 8080"
+  },
+  "keywords": [
+    "niza",
+    "nz",
+    "web component"
+  ],
+  "author": "Niza Toshpulatov <niza@hey.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.2.2"
+  }
+}
