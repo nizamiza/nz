@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ESNext",
+    "checkJs": true,
+    "strict": true,
+    "module": "NodeNext",
+    "outDir": "./dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["./lib/"]
+}
