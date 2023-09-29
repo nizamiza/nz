@@ -27,4 +27,4 @@ await writeFile(
 );
 
 await copyFile("./README.md", "./dist/README.md");
-await copyFile("./lib/global.d.ts", "./dist/global.d.ts");
+await copyFile("./lib/index.d.ts", "./dist/index.d.ts");
