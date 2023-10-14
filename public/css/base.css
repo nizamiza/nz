@@ -1,0 +1,165 @@
+@layer reset, base;
+
+@layer base {
+  :root {
+    /* Theme, HSL components. Usage example: hsl(var(--theme-accent)); */
+    --theme-accent: 221 50% 28%;
+    --theme-dark: 221 19% 20%;
+    --theme-light: 240 23% 92%;
+    --theme-neutral: 214 4% 39%;
+    --theme-black: 220 20% 11%;
+    --theme-white: 220 23% 98%;
+
+    /* Border radiuses */
+    --br-sm: 0.25rem;
+    --br-md: 0.5rem;
+    --br-lg: 0.75rem;
+    --br-xl: 1rem;
+    --br-full: 100vw;
+
+    /* Transition durations */
+    --td-bullet: 25ms;
+    --td-fast: 75ms;
+    --td-normal: 150ms;
+    --td-slow: 300ms;
+    --td-turtle: 450ms;
+
+    /* Box-shadows */
+    --sh-theme: var(--theme-black);
+    --sh-color: hsl(var(--sh-theme) / 0.25);
+
+    --sh-sm: 0 0.25em 0.5em var(--sh-color);
+    --sh-md: 0 0.5em 1.5em var(--sh-color);
+    --sh-lg: 0 1em 2.25em var(--sh-color);
+    --sh-xl: 0 2em 5em var(--sh-color);
+
+    --bg-color: hsl(var(--theme-white));
+    --fg-color: hsl(var(--theme-dark));
+  }
+
+  html {
+    color-scheme: light dark;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+      "Helvetica Neue", sans-serif;
+  }
+
+  a {
+    color: hsl(var(--theme-accent));
+  }
+
+  h1,
+  [data-as="h1"] {
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 15ch;
+  }
+
+  h2,
+  [data-as="h2"] {
+    font-size: 2.5rem;
+    font-weight: 800;
+    max-width: 25ch;
+  }
+
+  h3,
+  [data-as="h3"] {
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 35ch;
+  }
+
+  h4,
+  [data-as="h4"] {
+    font-size: 1.5rem;
+    font-weight: 700;
+    max-width: 40ch;
+  }
+
+  h5,
+  [data-as="h5"] {
+    font-size: 1.25rem;
+    font-weight: 600;
+    max-width: 45ch;
+  }
+
+  h6,
+  [data-as="h6"] {
+    font-size: 1.125rem;
+    font-weight: 600;
+    max-width: 50ch;
+  }
+
+  p {
+    max-width: 69ch;
+  }
+
+  button {
+    display: inline-flex;
+    gap: 0.75ch;
+    background-color: hsl(var(--theme-accent));
+    color: var(--bg-color);
+    border: 0;
+    padding: 0.35em 1.25em;
+    border-radius: var(--br-lg);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  main {
+    display: grid;
+    gap: 4rem;
+    place-content: center;
+    padding-inline: 1rem;
+    padding-top: 3rem;
+  }
+
+  nz-footer {
+    margin-top: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --theme-accent: 221 50% 80%;
+
+      --bg-color: hsl(var(--theme-black));
+      --fg-color: has(var(--theme-light));
+    }
+  }
+
+  @media screen and (min-width: 48rem) {
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+
+    h6 {
+      font-size: 1.25rem;
+    }
+
+    main {
+      padding-top: 7rem;
+    }
+  }
+}

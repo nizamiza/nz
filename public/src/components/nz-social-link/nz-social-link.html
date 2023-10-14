@@ -1,0 +1,23 @@
+<template>
+  <style>
+    .social-link {
+      --size: 2rem;
+      --mask: var(--icon-url) no-repeat center;
+
+      display: block;
+      position: relative;
+      background-color: currentColor;
+      width: var(--size);
+      height: var(--size);
+
+      -webkit-mask: var(--mask);
+      -webkit-mask-size: var(--size);
+
+      mask: var(--mask);
+      mask-size: var(--size);
+    }
+  </style>
+  <a class="social-link" target="_blank">
+    <slot></slot>
+  </a>
+</template>

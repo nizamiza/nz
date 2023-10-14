@@ -1,0 +1,83 @@
+<template>
+  <style>
+    .info-section {
+      display: grid;
+      gap: 1.5rem;
+      text-align: center;
+      justify-items: center;
+    }
+
+    .info-section > header {
+      display: grid;
+      gap: 1rem;
+      justify-items: center;
+    }
+
+    .social-link-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2rem;
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+  <nz-head>
+    <title>Niza</title>
+    <meta name="description" content="Niza's personal page" />
+  </nz-head>
+  <main>
+    <section class="info-section">
+      <header>
+        <nz-gravatar></nz-gravatar>
+        <h1>Hi, I'm Niza!</h1>
+        <p>
+          Welcome to my page. Currently I'm working as a web developer. I enjoy
+          creating things and in my free time I like to compose music.
+        </p>
+        <ul class="social-link-list">
+          <li>
+            <nz-social-link
+              icon="github-original"
+              href="https://github.com/nizamiza"
+            >
+              My GitHub profile
+            </nz-social-link>
+          </li>
+          <li>
+            <nz-social-link
+              icon="linkedin-original"
+              href="https://www.linkedin.com/in/niza-toshpulatov-27223b233/"
+            >
+              My LinkedIn profile
+            </nz-social-link>
+          </li>
+          <li>
+            <nz-social-link
+              icon="spotify-original"
+              href="https://open.spotify.com/artist/2M4Exu82R60obRFPGlfvFA?si=tFLBqqNrTdySOUW-dmZhXA"
+            >
+              My Spotify profile
+            </nz-social-link>
+          </li>
+          <li>
+            <nz-social-link
+              href="https://www.youtube.com/channel/UCWcOtEVT1KVRPZ0j-pumVZA"
+              icon="youtube"
+            >
+              My YouTube profile
+            </nz-social-link>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section class="info-section">
+      <h2>Blog</h2>
+      <p>
+        I have a blog at <a href="https://world.hey.com/niza">HEY World</a>. I
+        tend to post all kinds of things related to my work and interests. Check
+        it out if you're interested.
+      </p>
+    </section>
+  </main>
+</template>
