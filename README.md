@@ -12,7 +12,9 @@ You can use `nz` via CDN:
 import { bootstrap } from "https://cdn.jsdelivr.net/npm/nzjs/lib/core/bootstrap.js";
 ```
 
-You can install type declarations via NPM:
+### NPM
+
+Or you can install it via NPM:
 
 ```bash
 npm install nzjs
@@ -178,6 +180,10 @@ export const definition = {
 
 - `name` - name of the custom element (must be at least 2 words separated by a dash).
 - `moduleUrl` - import URL that will be used to resolve the template file.
+- `init` - init function that will be called inside of the custom element
+  constructor. As an argument it receives an object with attached
+  `shadowRoot` and `slots` object that has element slots mapped to their
+  names.
 
 ## TypeScript
 
